@@ -47,12 +47,20 @@ function storeTime() {
 
 
 function flashScreen() {
-    console.log("Flashing screen..."); // Log flashing screen
-    document.body.style.backgroundColor = 'blue';
-    setTimeout(() => {
-        document.body.style.backgroundColor = 'red';
-    }, 500);
+  console.log("Flashing screen..."); // Log flashing screen
+  let count = 0;
+  const interval = setInterval(() => {
+      document.body.style.backgroundColor = count % 2 === 0 ? 'blue' : 'red'; // Toggle between blue and red
+      count++;
+      if (count === 40) { // Stop after 20 seconds (40 half-second intervals)
+          clearInterval(interval);
+          console.log("Flashing stopped."); // Log that flashing stopped
+          document.body.style.backgroundColor = 'black'; // Set background color to black
+      }
+  }, 500);
 }
+
+
 
 storeTimeBtn.addEventListener('click', storeTime);
 setInterval(setClock, 1000);
