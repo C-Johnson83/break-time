@@ -33,3 +33,6 @@ Use Break Clock responsibly, and remember to stretch those coding muscles betwee
 ## Deployed Github Page
 https://c-johnson83.github.io/break-time/
 
+### Credits
+Clock was made using the youtube tutorial by "Web Dev Simplified"  
+https://www.youtube.com/watch?v=Ki0XXrlKlHY
