@@ -2,8 +2,30 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
   }
-  
-  body {
+  body  {
+    background-color: gray;
+  }
+  header {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  button {
+    background-color: blueviolet;
+    color: white;
+  }
+  section {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+  }
+
+  main {
     background: black;
     display: flex;
     justify-content: center;

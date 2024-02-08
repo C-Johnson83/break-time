@@ -38,6 +38,11 @@ function storeTime() {
   console.log("Stored time (Central):", futureTimeCentral.toLocaleString('en-US', { timeZone: 'America/Chicago' }));
   console.log("Stored time (Mountain):", futureTimeMountain.toLocaleString('en-US', { timeZone: 'America/Denver' }));
   console.log("Stored time (Pacific):", futureTimePacific.toLocaleString('en-US', { timeZone: 'Pacific/Honolulu' }));
+
+  document.querySelector('section div:nth-child(4)').innerHTML = "Eastern Time <br>"+ futureTimeEastern.toLocaleString('en-US', { timeZone: 'America/New_York' });
+  document.querySelector('section div:nth-child(3)').innerHTML = "Central Time <br>"+futureTimeCentral.toLocaleString('en-US', { timeZone: 'America/Chicago' });
+  document.querySelector('section div:nth-child(2)').innerHTML = "Mountain Time <br>"+futureTimeMountain.toLocaleString('en-US', { timeZone: 'America/Denver' });
+  document.querySelector('section div:nth-child(1)').innerHTML = "Pacific Time <br>"+futureTimePacific.toLocaleString('en-US', { timeZone: 'Pacific/Honolulu' });
 }
 
 
