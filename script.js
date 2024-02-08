@@ -30,14 +30,14 @@ function setRotation(element, rotationRatio) {
 function storeTime() {
   const currentDate = new Date();
   const futureTimeEastern = new Date(currentDate.getTime() + 15 * 60000); // 15 minutes from now (Eastern)
-  const futureTimeCentral = new Date(currentDate.getTime() + 15 * 60000 - (5 * 60 * 60000)); // 15 minutes from now (Central)
-  const futureTimeMountain = new Date(currentDate.getTime() + 15 * 60000 - (6 * 60 * 60000)); // 15 minutes from now (Mountain)
-  const futureTimePacific = new Date(currentDate.getTime() + 15 * 60000 - (7 * 60 * 60000)); // 15 minutes from now (Pacific)
+  const futureTimeCentral = new Date(currentDate.getTime() + 15 * 60000 ); // 15 minutes from now (Central)
+  const futureTimeMountain = new Date(currentDate.getTime() + 15 * 60000 ); // 15 minutes from now (Mountain)
+  const futureTimePacific = new Date(currentDate.getTime() + 15 * 60000 ); // 15 minutes from now (Pacific)
 
   console.log("Stored time (Eastern):", futureTimeEastern.toLocaleString('en-US', { timeZone: 'America/New_York' }));
   console.log("Stored time (Central):", futureTimeCentral.toLocaleString('en-US', { timeZone: 'America/Chicago' }));
   console.log("Stored time (Mountain):", futureTimeMountain.toLocaleString('en-US', { timeZone: 'America/Denver' }));
-  console.log("Stored time (Pacific):", futureTimePacific.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+  console.log("Stored time (Pacific):", futureTimePacific.toLocaleString('en-US', { timeZone: 'Pacific/Honolulu' }));
 }
 
 
