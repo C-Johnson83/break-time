@@ -12,10 +12,21 @@ function setClock() {
   setRotation(secondHand, secondsRatio)
   setRotation(minuteHand, minutesRatio)
   setRotation(hourHand, hoursRatio)
+
+  if (storedTime !== null && currentDate >= storedTime) {
+      flashScreen();
+      storedTime = null; // Reset stored time
+  }
 }
 
 function setRotation(element, rotationRatio) {
   element.style.setProperty('--rotation', rotationRatio * 360)
 }
 
+function flashScreen() {
+  document.body.style.backgroundColor = 'blue';
+  setTimeout(() => {
+      document.body.style.backgroundColor = 'red';
+  }, 500);
+}
 setClock()
