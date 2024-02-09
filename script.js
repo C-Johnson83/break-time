@@ -68,10 +68,10 @@ function flashScreen() {
     const interval = setInterval(() => {
         document.body.style.backgroundColor = count % 2 === 0 ? 'blue' : 'red'; // Toggle between blue and red
         count++;
-        if (count === 40) { // Stop after 20 seconds (40 half-second intervals)
+        if (count === 20) { // Stop after 10 seconds (40 half-second intervals)
             clearInterval(interval);
             console.log("Flashing stopped."); // Log that flashing stopped
-            document.body.style.backgroundColor = 'black'; // Set background color to black
+            document.body.style.backgroundColor = 'white'; // Set background color to black
         }
     }, 500);
 }

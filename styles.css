@@ -1,54 +1,65 @@
 /* Global styles */
 *, *::after, *::before {
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Background color for the body */
 body {
-  background-color: gray;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Header styles */
 header {
-  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* input styles */
+input {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+  text-align: center;
+}
 /* Button styles */
 button {
   background-color: blueviolet;
   color: white;
+  font-size: x-large;
 }
 
 /* Section styles */
 section {
-  background: black;
-  color: white;
+  color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-weight: bolder;
+  font-size: large;
+  margin-top: 10%;
+
 }
 
 /* Main styles */
 main {
-  background: black;
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
+  margin: 25px;
 }
 
 /* Clock container styles */
 .clock {
-  width: 300px;
-  height: 300px;
-  background-color: rgba(255, 255, 255, .8);
+  width: 500px;
+  height: 500px;
+  background-color: rgba(220, 216, 216, 0.8);
   border-radius: 50%;
-  border: 2px solid black;
+  border: 15px solid black;
   position: relative;
 }
 
@@ -115,7 +126,7 @@ main {
 .clock .hand.minute {
   width: 7px;
   height: 40%;
-  background-color: black;
+  background-color: blue;
 }
 
 /* Hour hand styles */
