@@ -44,18 +44,21 @@ function storeTime() {
     const futureTimeCentral = new Date(currentDate.getTime() + breakDuration * 60000);
     const futureTimeMountain = new Date(currentDate.getTime() + breakDuration * 60000);
     const futureTimePacific = new Date(currentDate.getTime() + breakDuration * 60000);
+    const futureTimeHST = new Date(currentDate.getTime() + breakDuration * 60000);
 
     // Log stored times in different time zones
     console.log("Stored time (Eastern):", futureTimeEastern.toLocaleString('en-US', { timeZone: 'America/New_York' }));
     console.log("Stored time (Central):", futureTimeCentral.toLocaleString('en-US', { timeZone: 'America/Chicago' }));
     console.log("Stored time (Mountain):", futureTimeMountain.toLocaleString('en-US', { timeZone: 'America/Denver' }));
+    console.log("Stored time (Pacific):", futureTimePacific.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
     console.log("Stored time (Pacific):", futureTimePacific.toLocaleString('en-US', { timeZone: 'Pacific/Honolulu' }));
 
     // Set innerHTML of divs to display stored times in different time zones
-    document.querySelector('section div:nth-child(4)').innerHTML = "Eastern Time <br>" + futureTimeEastern.toLocaleString('en-US', { timeZone: 'America/New_York' });
-    document.querySelector('section div:nth-child(3)').innerHTML = "Central Time <br>" + futureTimeCentral.toLocaleString('en-US', { timeZone: 'America/Chicago' });
-    document.querySelector('section div:nth-child(2)').innerHTML = "Mountain Time <br>" + futureTimeMountain.toLocaleString('en-US', { timeZone: 'America/Denver' });
-    document.querySelector('section div:nth-child(1)').innerHTML = "Pacific Time <br>" + futureTimePacific.toLocaleString('en-US', { timeZone: 'Pacific/Honolulu' });
+    document.querySelector('section div:nth-child(5)').innerHTML = "Eastern Time <br>" + futureTimeEastern.toLocaleString('en-US', { timeZone: 'America/New_York' });
+    document.querySelector('section div:nth-child(4)').innerHTML = "Central Time <br>" + futureTimeCentral.toLocaleString('en-US', { timeZone: 'America/Chicago' });
+    document.querySelector('section div:nth-child(3)').innerHTML = "Mountain Time <br>" + futureTimeMountain.toLocaleString('en-US', { timeZone: 'America/Denver' });
+    document.querySelector('section div:nth-child(2)').innerHTML = "Pacific Time <br>" + futureTimePacific.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    document.querySelector('section div:nth-child(1)').innerHTML = "Hawaii-Aleutian Time <br>" + futureTimeHST.toLocaleString('en-US', { timeZone: 'Pacific/Honolulu' });
 
     // Store future time
     storedTime = futureTimeEastern;

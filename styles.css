@@ -50,7 +50,7 @@ main {
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
-  margin: 25px;
+  margin-top: 15px;
 }
 
 /* Clock container styles */
